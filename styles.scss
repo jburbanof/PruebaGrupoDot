@@ -1,0 +1,273 @@
+@font-face {
+  font-family: "regular";
+  src: url(./fonts/TelefonicaWeb-Regular.woff);
+}
+@font-face {
+  font-family: "light";
+  src: url(./fonts/TelefonicaWeb-Light.woff);
+}
+@font-face {
+  font-family: "extra-light";
+  src: url(./fonts/TelefonicaWeb-ExtraLight.woff);
+}
+@font-face {
+  font-family: "dot-movistar";
+  src: url(./fonts/dotmovistar-font.woff);
+}
+$blue: #1caadf;
+$grey: #86888c;
+* {
+  margin: 0;
+  padding: 0;
+}
+#navBar {
+  width: 100%;
+  position: fixed;
+  background-color: #ffffff;
+  z-index: 1;
+  ul {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    list-style: none;
+    li {
+      font-family: "light";
+      margin: 2px 5px;
+      text-align: center;
+      font-size: 10px;
+    }
+  }
+}
+
+#home {
+  background-color: $blue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  position: relative;
+  z-index: 0;
+  h1 {
+    font-family: "extra-light";
+    font-size: 40px;
+    text-align: center;
+    color: white;
+    font-weight: 600;
+    z-index: 6;
+  }
+  form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 6;
+    .text {
+      input {
+        padding: 0;
+        margin: 0;
+        width: 200px;
+        height: 30px;
+        background-color: #caf1e4c9;
+        border: unset;
+      }
+      button {
+        padding: 0;
+        margin: 0;
+        width: 150px;
+        height: 30px;
+        cursor: pointer;
+        background-color: $blue;
+        border: unset;
+        box-shadow: 0px 0px 1px black;
+        color: white;
+      }
+    }
+    .checkbox {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      label {
+        font-family: "extra-light";
+        font-size: 9px;
+        color: white;
+        a {
+          color: white;
+        }
+        a:visited {
+          color: white;
+        }
+      }
+    }
+  }
+  #persona {
+    width: 350px;
+    position: absolute;
+    bottom: 0;
+    left: 35px;
+    z-index: 4;
+  }
+  .estrella {
+    z-index: 6;
+    position: absolute;
+    right: 70px;
+    bottom: 100px;
+    width: 150px;
+    img{
+      width: 150px;
+    }
+    
+  }
+  svg {
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 5;
+  }
+}
+#info {
+  height: 100vh;
+  padding-top: 45px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  h3 {
+    width: 80%;
+    text-align: center;
+    font-family: "regular";
+    margin-bottom: 25px;
+    color: #5c5d61;
+    font-weight: normal;
+  }
+  div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 90%;
+    #planActual {
+      height: 300px;
+      width: 200px;
+      padding: 10px;
+      box-sizing: border-box;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      background-color: $grey;
+      color: white;
+      font-family: "extra-light";
+    }
+    #planNuevo {
+      border-radius: 3px;
+      width: 100%;
+      margin: 10px;
+      padding: 10px;
+      box-sizing: border-box;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      background-color: $blue;
+      color: white;
+      font-family: "extra-light";
+      #beneficios {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        #descripcion {
+          width: 40%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          text-align: center;
+          padding: 10px;
+          p:nth-child(1){
+            font-family: "regular";
+            font-size: 50px;
+            font-weight: bold;
+          }
+          p:nth-child(2){
+            font-family: "light";
+            font-size: 10px;
+          }
+          p:nth-child(3){
+            font-family: "regular";
+            font-size: 20px;
+            font-weight: normal;
+          }
+        }
+        #otros {
+          display: grid;
+          grid-template-columns: repeat(2,145px);
+          grid-template-rows: repeat(2,55px) ;
+          gap: 15px;
+          width: 60%;
+          .otro {
+            width: 100%;
+            height: 100%;
+            border-radius: 5px;
+            border: 1px solid white;
+            font-family: "light";
+            font-size: 10px;
+            text-align: center;
+            flex-direction: column;
+            padding: 5px;
+            box-sizing: border-box;
+          }
+          .otro:nth-child(1){
+            img{
+              margin-top: 5px;
+              width: 100px;
+            }
+          }
+          .otro:nth-child(3){
+            img{
+              width: 100px;
+            }
+          }
+          
+        }
+      }
+    }
+  }
+  form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    .text {
+      input {
+        width: 200px;
+        height: 25px;
+      }
+      button {
+        width: 150px;
+        height: 30px;
+        cursor: pointer;
+      }
+    }
+    .checkbox {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      label {
+        font-family: "extra-light";
+        font-size: 9px;
+      }
+      a {
+        color: $grey;
+      }
+      a:visited {
+        color: $grey;
+      }
+    }
+  }
+}

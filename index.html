@@ -3,23 +3,45 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
     <link rel="stylesheet" href="styles.css" />
     <title>Document</title>
+    
   </head>
+
   <body>
+    <input type="checkBox" id="checkBox" name="checkBox" />
+      <label for='checkBox' id="menu">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </label>
+    <ul id="navResponsive">
+        <li class='liResponsive'><a href="#">Productos y servicios</a></li>
+        <li class='liResponsive'><a href="#">Información importante
+          para usuarios</a></li>
+        <li class='liResponsive'><a href="#">Pagos y recargas</a></li>
+        <li class='liResponsive'><a href="#">H</a></li>
+        <li class='liResponsive'><a href="#"><img class="navButton" src="./images/eye.png" alt=""></a></li>
+        <li class='liResponsive'><button class="navButton">Mi Movistar</button></li>
+        
+    </ul>
+
     <nav id="navBar">
+      <a href=""><img src="./images/logoMovistar.png" alt="" /></a>
+      
+      
       <ul>
-        <li>
-          <img src="" alt="" />
+        <li> <a href="">Productos y servicios</a></li>
+        <li><a href="">Información importante
+          para usuarios</a>
         </li>
-        <li>Productos y servicios</li>
+        <li><a href="">Pagos y recargas</a></li>
         <li>
-          Información importante <br />
-          para usuarios
+          <a href="">H</a>
+          <a href=""><img class="navButton" src="./images/eye.png" alt=""></a>
+          <button class="navButton">Mi Movistar</button>
         </li>
-        <li>Pagos y recargas</li>
-        <li></li>
       </ul>
     </nav>
     <section id="home">
@@ -33,7 +55,7 @@
           <button>Cambiarme ya</button>
         </div>
         <div class="checkbox">
-          <input type="checkbox" name="terms" id="" />
+          <input type="checkbox" name="terms1"  />
           <label for="terms1"
             >Acepto <a href="#">terminos y condiciones</a> y autorizo el
             tratamiento de datos personales</label
@@ -42,7 +64,7 @@
       </form>
       <img id="persona" src="./images/persona.png" width="350" alt="" />
 
-      <a class="estrella" href="https://www.grupodot.com">
+      <a class="estrella" href="https://www.grupodot.com" target="_blank">
         <span>
           <img src="./images/estrella.png" alt="" />
         </span>
@@ -57,13 +79,13 @@
       </svg>
     </section>
     <section id="info">
-      <h3>
+      <h2>
         Nuevo plan con muchas mas Gigas en 4G/3G, minutos ilimitados a todo
         operador, video, música y servicios que hacen mas facil tu vida
-      </h3>
+      </h2>
       <div>
         <div id="planActual">
-          <h4>TU PLAN ACTUAL</h4>
+          <p>TU PLAN ACTUAL</p>
           <p>4.5 GB</p>
           <p>$80.900/mes</p>
         </div>
@@ -84,13 +106,19 @@
                 <img src="./images/flags.png" alt="">
               </div>
               <div class="otro ">
-                <span>¡Upss!</span>  Seguro de pantalla
+                <img src="./images/ups.png" alt="">
+                <p><span>¡Upss!</span>  Seguro de pantalla</p>
+                
               </div>
               <div class="otro">
                 <img src="./images/movistarPlay.png" alt="">
                 Lo mejor de lo que ves en TV, cine e internet en una sola App
               </div>
-              <div class="otro">Napster, la App de Movistar Música</div>
+              <div class="otro">
+                <img src="./images/napster.png" alt="">
+                <p>Napster, la App de Movistar Música</p>
+                
+              </div>
             </div>
           </div>
         </div>
@@ -102,7 +130,7 @@
           <button>Cambiarme ya</button>
         </div>
         <div class="checkbox">
-          <input type="checkbox" name="terms" id="" />
+          <input type="checkbox" name="terms" />
           <label for="terms1"
             >Acepto <a href="#">terminos y condiciones</a> y autorizo el
             tratamiento de datos personales</label
@@ -110,5 +138,20 @@
         </div>
       </form>
     </section>
+    <script>
+      const checkBox = document.getElementById('checkBox')
+      const navResponsive = document.getElementById('navResponsive')
+      const liResponsive = document.querySelectorAll('.liResponsive')
+
+      function displayMenu() {
+          if(checkBox.checked){
+            navResponsive.style.display='flex'
+          }else{
+            navResponsive.style.display='none'
+          }
+      }
+      checkBox.addEventListener("click", displayMenu)
+      liResponsive.forEach(li => li.addEventListener("click", () => navResponsive.style.display='none' ));
+    </script>
   </body>
 </html>

@@ -23,14 +23,116 @@
   padding: 0;
 }
 
-#navBar {
+#navResponsive {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  z-index: 7;
+  background-color: white;
+}
+
+#navResponsive li {
   width: 100%;
+  height: 16.6%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "regular";
+  font-size: 30px;
+  border-bottom: 3px solid #1caadf;
+}
+
+#navResponsive li a {
+  text-decoration: none;
+  color: #1caadf;
+}
+
+#navResponsive li:nth-child(4) {
+  font-family: "dot-movistar";
+}
+
+#navResponsive li:nth-child(6) button {
+  padding: 10px;
+  background-color: #1caadf;
+  width: 100px;
+  cursor: pointer;
+  font-family: "regular";
+}
+
+#menu {
+  width: 40px;
+  height: 40px;
+  z-index: 200;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  cursor: pointer;
+}
+
+#menu .line {
+  width: 30px;
+  height: 6px;
+  background-color: #1caadf;
+  border-radius: 2.5px;
+  margin-bottom: 5px;
+}
+
+#checkBox {
+  display: none;
+}
+
+#navBar {
+  width: 100vw;
   position: fixed;
   background-color: #ffffff;
   z-index: 1;
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 0px 1px 5px black;
+          box-shadow: 0px 1px 5px black;
+}
+
+#navBar a {
+  margin-left: 10px;
 }
 
 #navBar ul {
+  width: 100vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -42,13 +144,68 @@
       -ms-flex-direction: row;
           flex-direction: row;
   list-style: none;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 #navBar ul li {
   font-family: "light";
-  margin: 2px 5px;
+  margin: 2px 10px;
+  font-size: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   text-align: center;
-  font-size: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-height: 60px;
+}
+
+#navBar ul li a {
+  width: inherit;
+  color: black;
+  text-decoration: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#navBar ul li a:visited {
+  color: black;
+}
+
+#navBar ul li a:hover {
+  -webkit-text-decoration: underline black;
+          text-decoration: underline black;
+}
+
+#navBar ul li:nth-child(4) {
+  font-family: "dot-movistar";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#navBar ul li:nth-child(4) .navButton {
+  margin: 0 20px;
+}
+
+#navBar ul li:nth-child(4) img {
+  width: 35px;
+}
+
+#navBar ul li:nth-child(4) button {
+  padding: 10px;
+  background-color: #1caadf;
+  width: 100px;
+  cursor: pointer;
+  font-family: "regular";
 }
 
 #home {
@@ -73,11 +230,12 @@
 
 #home h1 {
   font-family: "extra-light";
-  font-size: 40px;
+  font-size: 70px;
   text-align: center;
   color: white;
   font-weight: 600;
   z-index: 6;
+  margin-bottom: 20px;
 }
 
 #home form {
@@ -97,26 +255,43 @@
   z-index: 6;
 }
 
+#home form .text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 #home form .text input {
   padding: 0;
   margin: 0;
-  width: 200px;
-  height: 30px;
+  width: 300px;
+  height: 45px;
   background-color: #caf1e4c9;
   border: unset;
+  font-size: 20px;
+  font-family: "regular";
+  text-align: center;
 }
 
 #home form .text button {
   padding: 0;
   margin: 0;
   width: 150px;
-  height: 30px;
+  height: 45px;
   cursor: pointer;
   background-color: #1caadf;
   border: unset;
-  -webkit-box-shadow: 0px 0px 1px black;
-          box-shadow: 0px 0px 1px black;
+  -webkit-box-shadow: 0px 0px 2px black;
+          box-shadow: 0px 0px 2px black;
   color: white;
+  font-size: 20px;
+  font-family: "regular";
 }
 
 #home form .checkbox {
@@ -133,7 +308,7 @@
 
 #home form .checkbox label {
   font-family: "extra-light";
-  font-size: 9px;
+  font-size: 15px;
   color: white;
 }
 
@@ -146,10 +321,10 @@
 }
 
 #home #persona {
-  width: 350px;
+  width: 480px;
   position: absolute;
   bottom: 0;
-  left: 35px;
+  left: 85px;
   z-index: 4;
 }
 
@@ -157,25 +332,25 @@
   z-index: 6;
   position: absolute;
   right: 70px;
-  bottom: 100px;
-  width: 150px;
+  bottom: 200px;
+  width: 175px;
 }
 
 #home .estrella img {
-  width: 150px;
+  width: 175px;
 }
 
 #home svg {
   display: block;
   position: absolute;
   left: 0;
-  bottom: 0;
+  bottom: -1px;
   z-index: 5;
 }
 
 #info {
   height: 100vh;
-  padding-top: 45px;
+  padding-top: 80px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   display: -webkit-box;
@@ -190,11 +365,11 @@
           flex-direction: column;
 }
 
-#info h3 {
-  width: 80%;
+#info h2 {
+  width: 70%;
   text-align: center;
   font-family: "regular";
-  margin-bottom: 25px;
+  margin-bottom: 45px;
   color: #5c5d61;
   font-weight: normal;
 }
@@ -213,12 +388,12 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  width: 90%;
+  width: 85%;
 }
 
 #info div #planActual {
-  height: 300px;
-  width: 200px;
+  height: 350px;
+  width: 300px;
   padding: 10px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -238,12 +413,26 @@
   text-align: center;
   background-color: #86888c;
   color: white;
-  font-family: "extra-light";
+  font-family: "regular";
+}
+
+#info div #planActual p:nth-child(1) {
+  font-size: 25px;
+}
+
+#info div #planActual p:nth-child(2) {
+  font-size: 45px;
+  font-family: "light";
+  margin: 55px 0px;
+}
+
+#info div #planActual p:nth-child(3) {
+  font-size: 25px;
 }
 
 #info div #planNuevo {
+  max-width: 800px;
   border-radius: 3px;
-  width: 100%;
   margin: 10px;
   padding: 10px;
   -webkit-box-sizing: border-box;
@@ -264,6 +453,11 @@
   background-color: #1caadf;
   color: white;
   font-family: "extra-light";
+}
+
+#info div #planNuevo h4 {
+  margin: 15px;
+  font-size: 20px;
 }
 
 #info div #planNuevo #beneficios {
@@ -304,28 +498,30 @@
 
 #info div #planNuevo #beneficios #descripcion p:nth-child(1) {
   font-family: "regular";
-  font-size: 50px;
+  font-size: 65px;
   font-weight: bold;
+  margin: 5px;
 }
 
 #info div #planNuevo #beneficios #descripcion p:nth-child(2) {
   font-family: "light";
-  font-size: 10px;
+  font-size: 13px;
 }
 
 #info div #planNuevo #beneficios #descripcion p:nth-child(3) {
+  margin-top: 10px;
   font-family: "regular";
-  font-size: 20px;
+  font-size: 25px;
   font-weight: normal;
 }
 
 #info div #planNuevo #beneficios #otros {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (145px)[2];
-      grid-template-columns: repeat(2, 145px);
-  -ms-grid-rows: (55px)[2];
-      grid-template-rows: repeat(2, 55px);
+  -ms-grid-columns: (185px)[2];
+      grid-template-columns: repeat(2, 185px);
+  -ms-grid-rows: (75px)[2];
+      grid-template-rows: repeat(2, 75px);
   gap: 15px;
   width: 60%;
 }
@@ -336,7 +532,7 @@
   border-radius: 5px;
   border: 1px solid white;
   font-family: "light";
-  font-size: 10px;
+  font-size: 15px;
   text-align: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -352,8 +548,50 @@
   width: 100px;
 }
 
+#info div #planNuevo #beneficios #otros .otro:nth-child(2) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+#info div #planNuevo #beneficios #otros .otro:nth-child(2) p {
+  width: 130px;
+  text-align: left;
+}
+
+#info div #planNuevo #beneficios #otros .otro:nth-child(3) {
+  font-size: 13px;
+}
+
 #info div #planNuevo #beneficios #otros .otro:nth-child(3) img {
   width: 100px;
+}
+
+#info div #planNuevo #beneficios #otros .otro:nth-child(4) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+#info div #planNuevo #beneficios #otros .otro:nth-child(4) p {
+  text-align: left;
+  width: 130px;
 }
 
 #info form {
@@ -373,14 +611,21 @@
 }
 
 #info form .text input {
-  width: 200px;
-  height: 25px;
+  width: 250px;
+  height: 42px;
+  font-family: "regular";
+  text-align: center;
+  font-size: 17px;
 }
 
 #info form .text button {
-  width: 150px;
-  height: 30px;
+  width: 170px;
+  height: 45px;
   cursor: pointer;
+  background-color: #86888c;
+  color: white;
+  font-family: "regular";
+  font-size: 17px;
 }
 
 #info form .checkbox {
@@ -393,11 +638,13 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 100%;
 }
 
 #info form .checkbox label {
-  font-family: "extra-light";
-  font-size: 9px;
+  font-family: "light";
+  font-size: 12px;
+  color: black;
 }
 
 #info form .checkbox a {
@@ -406,5 +653,123 @@
 
 #info form .checkbox a:visited {
   color: #86888c;
+}
+
+@media screen and (max-width: 1024px) {
+  #home h1 {
+    font-size: 55px;
+  }
+  #home #persona {
+    width: 370px;
+    left: 0;
+  }
+  #home .estrella {
+    bottom: 75px;
+  }
+  #info div {
+    width: 100%;
+    padding: 10px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  #info div #planNuevo {
+    padding: 0;
+  }
+  #info div #planNuevo h4 {
+    margin: 15px 5px;
+  }
+  #info div #planNuevo #beneficios #descripcion {
+    width: 35%;
+    padding: 5px;
+  }
+  #info div #planNuevo #beneficios #descripcion p:nth-child(1) {
+    font-size: 45px;
+  }
+  #info div #planNuevo #beneficios #otros {
+    width: 65%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  #navBar ul {
+    display: none;
+  }
+  #home form .text {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #home form .text button {
+    margin: 3px;
+  }
+  #home form .checkbox label {
+    width: 300px;
+    color: black;
+    font-family: "regular";
+    text-align: center;
+  }
+  #home form .checkbox label a {
+    color: black;
+  }
+  #home form .checkbox label a:visited {
+    color: black;
+  }
+  #home #persona {
+    width: 250px;
+  }
+  #home .estrella {
+    width: 120px;
+    bottom: 20px;
+    right: 70px;
+  }
+  #home .estrella img {
+    width: 120px;
+  }
+  #info div {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #info div #planNuevo h4 {
+    padding: 10px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  #info div #planNuevo #beneficios {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  #home h1 {
+    font-size: 50px;
+  }
+  #home #persona {
+    width: 200px;
+    left: -20px;
+  }
+  #info div #planNuevo #beneficios #descripcion {
+    width: 60%;
+  }
+  #info div #planNuevo #beneficios #descripcion p:nth-child(1) {
+    font-size: 50px;
+  }
+  #info div #planNuevo #beneficios #otros {
+    -ms-grid-columns: 185px;
+        grid-template-columns: 185px;
+    -ms-grid-rows: (75px)[4];
+        grid-template-rows: repeat(4, 75px);
+    gap: 5px;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

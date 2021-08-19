@@ -40,8 +40,8 @@ $grey: #86888c;
     align-items: center;
     font-family: "regular";
     font-size: 30px;
-    border-bottom: 3px solid $blue;
     a{
+      text-align: center;
       text-decoration: none;
       color: $blue;
     }
@@ -56,6 +56,7 @@ $grey: #86888c;
         width: 100px;
         cursor: pointer;
         font-family: "regular";
+        border-radius: 10px;
     }
   }
 }
@@ -142,6 +143,8 @@ $grey: #86888c;
         width: 100px;
         cursor: pointer;
         font-family: "regular";
+        border-radius: 10px;
+
       }
     }
   }
@@ -219,7 +222,7 @@ $grey: #86888c;
     }
   }
   #persona {
-    width: 480px;
+    width: 550px;
     position: absolute;
     bottom: 0;
     left: 85px;
@@ -443,7 +446,6 @@ $grey: #86888c;
       font-size: 55px;
     }
     #persona{
-      width: 370px;
       left: 0;
     }
     .estrella{
@@ -511,9 +513,6 @@ $grey: #86888c;
           }
         }
       }
-      #persona{
-        width: 250px;
-      }
       .estrella{
         width: 120px;
         bottom: 20px;
@@ -541,11 +540,14 @@ $grey: #86888c;
 @media screen and (max-width: 425px){
   #home{
     h1{
+      font-family: "extra-light";
+      font-weight: 400;
       font-size: 50px;
     }
     #persona{
-      width: 200px;
-      left: -20px;
+      width: 500px;
+      left: -50px;
+      bottom: 15px;
     }
   }
   #info{

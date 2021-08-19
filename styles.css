@@ -58,10 +58,10 @@
           align-items: center;
   font-family: "regular";
   font-size: 30px;
-  border-bottom: 3px solid #1caadf;
 }
 
 #navResponsive li a {
+  text-align: center;
   text-decoration: none;
   color: #1caadf;
 }
@@ -76,6 +76,7 @@
   width: 100px;
   cursor: pointer;
   font-family: "regular";
+  border-radius: 10px;
 }
 
 #menu {
@@ -206,6 +207,7 @@
   width: 100px;
   cursor: pointer;
   font-family: "regular";
+  border-radius: 10px;
 }
 
 #home {
@@ -321,7 +323,7 @@
 }
 
 #home #persona {
-  width: 480px;
+  width: 550px;
   position: absolute;
   bottom: 0;
   left: 85px;
@@ -660,7 +662,6 @@
     font-size: 55px;
   }
   #home #persona {
-    width: 370px;
     left: 0;
   }
   #home .estrella {
@@ -720,9 +721,6 @@
   #home form .checkbox label a:visited {
     color: black;
   }
-  #home #persona {
-    width: 250px;
-  }
   #home .estrella {
     width: 120px;
     bottom: 20px;
@@ -752,11 +750,14 @@
 
 @media screen and (max-width: 425px) {
   #home h1 {
+    font-family: "extra-light";
+    font-weight: 400;
     font-size: 50px;
   }
   #home #persona {
-    width: 200px;
-    left: -20px;
+    width: 500px;
+    left: -50px;
+    bottom: 15px;
   }
   #info div #planNuevo #beneficios #descripcion {
     width: 60%;

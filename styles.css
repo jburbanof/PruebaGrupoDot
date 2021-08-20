@@ -799,6 +799,12 @@
     left: 4px;
     bottom: 230px;
   }
+  #home .estrella {
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
   #info div #planNuevo #beneficios #descripcion {
     width: 60%;
   }

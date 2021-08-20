@@ -1,21 +1,21 @@
 @font-face {
   font-family: "regular";
-  src: url(./fonts/TelefonicaWeb-Regular.woff);
+  src: url(./fonts/TelefonicaWeb-Regular.woff), url(./fonts/TelefonicaWeb-Regular.eot), url(./fonts/TelefonicaWeb-Regular.woff2), url(./fonts/TelefonicaWeb-Regular.svg);
 }
 
 @font-face {
   font-family: "light";
-  src: url(./fonts/TelefonicaWeb-Light.woff);
+  src: url(./fonts/TelefonicaWeb-Light.woff), url(./fonts/TelefonicaWeb-Light.eot), url(./fonts/TelefonicaWeb-Light.svg), url(./fonts/TelefonicaWeb-Light.woff2);
 }
 
 @font-face {
   font-family: "extra-light";
-  src: url(./fonts/TelefonicaWeb-ExtraLight.woff);
+  src: url(./fonts/TelefonicaWeb-ExtraLight.woff), url(./fonts/TelefonicaWeb-ExtraExtraLight.eot), url(./fonts/TelefonicaWeb-ExtraLight.svg), url(./fonts/TelefonicaWeb-ExtraLight.woff2);
 }
 
 @font-face {
   font-family: "dot-movistar";
-  src: url(./fonts/dotmovistar-font.woff);
+  src: url(./fonts/dotmovistar-font.woff), url(./fonts/dotmovistar-font.eot), url(./fonts/dotmovistar-font.woff2), url(./fonts/dotmovistar-font.svg);
 }
 
 * {
@@ -330,6 +330,14 @@
   z-index: 4;
 }
 
+#home #pantalla {
+  position: absolute;
+  left: 144px;
+  bottom: 236px;
+  z-index: 5;
+  width: 105px;
+}
+
 #home .estrella {
   z-index: 6;
   position: absolute;
@@ -394,6 +402,7 @@
 }
 
 #info div #planActual {
+  border-radius: 3px;
   height: 350px;
   width: 300px;
   padding: 10px;
@@ -550,6 +559,10 @@
   width: 100px;
 }
 
+#info div #planNuevo #beneficios #otros .otro:nth-child(1) span {
+  font-weight: bolder;
+}
+
 #info div #planNuevo #beneficios #otros .otro:nth-child(2) {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -564,9 +577,19 @@
           flex-direction: row;
 }
 
+#info div #planNuevo #beneficios #otros .otro:nth-child(2) img {
+  margin-right: 10px;
+  -webkit-filter: brightness(2);
+          filter: brightness(2);
+}
+
 #info div #planNuevo #beneficios #otros .otro:nth-child(2) p {
   width: 130px;
   text-align: left;
+}
+
+#info div #planNuevo #beneficios #otros .otro:nth-child(2) p span {
+  font-weight: bolder;
 }
 
 #info div #planNuevo #beneficios #otros .otro:nth-child(3) {
@@ -575,6 +598,8 @@
 
 #info div #planNuevo #beneficios #otros .otro:nth-child(3) img {
   width: 100px;
+  -webkit-filter: brightness(5);
+          filter: brightness(5);
 }
 
 #info div #planNuevo #beneficios #otros .otro:nth-child(4) {
@@ -589,6 +614,12 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+}
+
+#info div #planNuevo #beneficios #otros .otro:nth-child(4) img {
+  margin-right: 10px;
+  -webkit-filter: brightness(5);
+          filter: brightness(5);
 }
 
 #info div #planNuevo #beneficios #otros .otro:nth-child(4) p {
@@ -627,6 +658,7 @@
   background-color: #86888c;
   color: white;
   font-family: "regular";
+  font-weight: bold;
   font-size: 17px;
 }
 
@@ -663,6 +695,9 @@
   }
   #home #persona {
     left: 0;
+  }
+  #home #pantalla {
+    left: 59px;
   }
   #home .estrella {
     bottom: 75px;
@@ -758,6 +793,11 @@
     width: 500px;
     left: -50px;
     bottom: 15px;
+  }
+  #home #pantalla {
+    width: 95px;
+    left: 4px;
+    bottom: 230px;
   }
   #info div #planNuevo #beneficios #descripcion {
     width: 60%;

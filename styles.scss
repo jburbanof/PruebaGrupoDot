@@ -1,18 +1,18 @@
 @font-face {
   font-family: "regular";
-  src: url(./fonts/TelefonicaWeb-Regular.woff);
+  src: url(./fonts/TelefonicaWeb-Regular.woff), url(./fonts/TelefonicaWeb-Regular.eot), url(./fonts/TelefonicaWeb-Regular.woff2), url(./fonts/TelefonicaWeb-Regular.svg);
 }
 @font-face {
   font-family: "light";
-  src: url(./fonts/TelefonicaWeb-Light.woff);
+  src: url(./fonts/TelefonicaWeb-Light.woff), url(./fonts/TelefonicaWeb-Light.eot), url(./fonts/TelefonicaWeb-Light.svg), url(./fonts/TelefonicaWeb-Light.woff2);
 }
 @font-face {
   font-family: "extra-light";
-  src: url(./fonts/TelefonicaWeb-ExtraLight.woff);
+  src: url(./fonts/TelefonicaWeb-ExtraLight.woff), url(./fonts/TelefonicaWeb-ExtraExtraLight.eot), url(./fonts/TelefonicaWeb-ExtraLight.svg), url(./fonts/TelefonicaWeb-ExtraLight.woff2);
 }
 @font-face {
   font-family: "dot-movistar";
-  src: url(./fonts/dotmovistar-font.woff);
+  src: url(./fonts/dotmovistar-font.woff), url(./fonts/dotmovistar-font.eot), url(./fonts/dotmovistar-font.woff2), url(./fonts/dotmovistar-font.svg);
 }
 $blue: #1caadf;
 $grey: #86888c;
@@ -228,6 +228,13 @@ $grey: #86888c;
     left: 85px;
     z-index: 4;
   }
+  #pantalla{
+    position: absolute;
+    left: 144px;
+    bottom: 236px;
+    z-index: 5;
+    width: 105px;
+  }
   .estrella {
     z-index: 6;
     position: absolute;
@@ -269,6 +276,7 @@ $grey: #86888c;
     flex-direction: row;
     width: 85%;
     #planActual {
+      border-radius: 3px;
       height: 350px;
       width: 300px;
       padding: 10px;
@@ -364,21 +372,33 @@ $grey: #86888c;
               margin-top: 5px;
               width: 100px;
             }
+            span{
+              font-weight: bolder;
+            }
           }
           .otro:nth-child(2){
             display: flex;
             justify-content: center;
             text-align: center;
             flex-direction: row;
+            img{
+              margin-right: 10px;
+              filter: brightness(2);
+            }
             p{
               width: 130px;
               text-align: left;
+              span{
+                font-weight: bolder;
+              }
             }
           }
           .otro:nth-child(3){
             font-size: 13px;
             img{
               width: 100px;
+              filter: brightness(5);
+
             }
           }
           .otro:nth-child(4){
@@ -386,6 +406,11 @@ $grey: #86888c;
             justify-content: center;
             text-align: center;
             flex-direction: row;
+            img{
+              margin-right: 10px;
+              filter: brightness(5);
+
+            }
             p{
               text-align: left;
               width: 130px;
@@ -416,6 +441,7 @@ $grey: #86888c;
         background-color: $grey;
         color: white;
         font-family: "regular";
+        font-weight: bold;
         font-size: 17px;
       }
     }
@@ -447,6 +473,9 @@ $grey: #86888c;
     }
     #persona{
       left: 0;
+    }
+    #pantalla{
+      left: 59px;
     }
     .estrella{
       bottom: 75px;
@@ -548,6 +577,11 @@ $grey: #86888c;
       width: 500px;
       left: -50px;
       bottom: 15px;
+    }
+    #pantalla{
+      width: 95px;
+      left: 4px;
+      bottom: 230px;
     }
   }
   #info{
